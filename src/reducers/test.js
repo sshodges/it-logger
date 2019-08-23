@@ -2,17 +2,17 @@ import {
   GET_TECHS,
   ADD_TECH,
   DELETE_TECH,
-  TECHS_ERROR,
-  SET_LOADING
+  SET_LOADING,
+  TECHS_ERROR
 } from '../actions/types';
 
-const innitialState = {
+const initialState = {
   techs: null,
-  techError: null,
-  loading: false
+  loading: false,
+  error: null
 };
 
-export default (state = innitialState, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case GET_TECHS:
       return {
@@ -38,9 +38,10 @@ export default (state = innitialState, action) => {
         loading: true
       };
     case TECHS_ERROR:
+      console.error(action.payload);
       return {
         ...state,
-        techError: action.payload,
+        error: action.payload,
         loading: false
       };
     default:

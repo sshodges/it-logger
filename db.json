@@ -25,16 +25,6 @@
       "firstName": "Sam",
       "lastName": "Hodges",
       "id": 3
-    },
-    {
-      "firstName": "Sara",
-      "lastName": "Wilson",
-      "id": 4
-    },
-    {
-      "firstName": "John",
-      "lastName": "Doe",
-      "id": 5
     }
   ]
 }
